@@ -12,7 +12,7 @@ public class Category {
     public void catalog(){
         System.out.println(name + ": ");
         for (Goods good : goods) {
-            System.out.println(good.aboutGood());
+            System.out.println("id - " + good.getId() + " " + good.aboutGood());
         }
         System.out.println();
     }

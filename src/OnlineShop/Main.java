@@ -12,6 +12,8 @@ public class Main {
         Goods goods8 = new Goods("яблоки", 55, 4.1);
         Goods goods9 = new Goods("огурцы", 85, 3.1);
         Goods goods10 = new Goods("кефир", 115.6, 4.7);
+        Goods[] goods = {goods1, goods2, goods3, goods4, goods5, goods6, goods7, goods8, goods9, goods10};
+
         final int n = 3;
         Category[] categories = new Category[n];
         categories[0] = new Dairy(goods1, goods2, goods3, goods10);
@@ -21,7 +23,8 @@ public class Main {
         for (Category category : categories) {
             category.catalog();
         }
-
+        System.out.println("Всего в каталоге продуктов " +Goods.Stat.count);
+        System.out.println();
         User user1 = new User("Лопаткин", "kdjfie");
         User user2 = new User("Веточкин", "kdjlagh");
         User user3 = new User("Ложкин", "ksjhdga");
@@ -42,5 +45,7 @@ public class Main {
             user.getBuy();
             System.out.println();
         }
+
+
     }
 }

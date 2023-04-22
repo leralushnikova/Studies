@@ -5,7 +5,12 @@ public class Goods {
     private double price;
     private double rating;
     private final double MAX_RATING = 5;
+    private int id;
 
+    {
+        Stat.count++;
+        id = ++Stat.id;
+    }
 
     public Goods(String name, double price, double rating) {
         if(isRating(rating)) {
@@ -30,4 +35,14 @@ public class Goods {
     public String aboutGood(){
         return name + "\t" + price + " руб.\tрейтинг: " + rating;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    class Stat{
+        public static int count = 0;
+        public static int id = 0;
+    }
+
 }
