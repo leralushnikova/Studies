@@ -7,6 +7,7 @@ public class Main {
         Shape[] shapes = new Shape[]{s, s1};
         for (Shape shape : shapes) {
             shape.draw();
+            System.out.println(shape);// shape.toString()==shape
         }
     }
 }

@@ -14,4 +14,14 @@ public class Rectangle extends Shape{
     public void draw() {
         System.out.println("Нарисован прямоугольник "+getColor());
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "x1=" + x1 +
+                ", y1=" + y1 +
+                ", x2=" + x2 +
+                ", y2=" + y2 +
+                "} " + super.toString();
+    }
 }

@@ -23,7 +23,7 @@ public class Ebb {
                 case 13:
                     s += "13 ";
             }
-            System.out.println(s); // 9 10 10 d 13
+            System.out.println(s);
         }
     }
 
