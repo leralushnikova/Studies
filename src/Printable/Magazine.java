@@ -45,9 +45,11 @@ public class Magazine implements Printable{
     }
 
     public static void printMagazines(Printable[] printables) {
+        System.out.println("Printing magazines:");
         for (Printable printable : printables) {
             if(printable instanceof Magazine) {
-                printable.print();
+                Magazine magazine = (Magazine) printable;
+                System.out.println(magazine.getName());
             }
         }
     }

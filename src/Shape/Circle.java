@@ -2,7 +2,7 @@ package Shape;
 
 import java.util.Objects;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
     private int x, y, radios;
 
     public Circle(String color, int x, int y, int radios) {
@@ -11,9 +11,19 @@ public class Circle extends Shape{
         this.y = y;
         this.radios = radios;
     }
+
     @Override
     public void draw() {
         System.out.println("Нарисован круг " + getColor());
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "x=" + x +
+                ", y=" + y +
+                ", radios=" + radios +
+                "} " + super.toString();
     }
 
     @Override
@@ -28,14 +38,5 @@ public class Circle extends Shape{
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), x, y, radios);
-    }
-
-    @Override
-    public String toString() {
-        return "Circle{" +
-                "x=" + x +
-                ", y=" + y +
-                ", radios=" + radios +
-                "} " + super.toString();
     }
 }
